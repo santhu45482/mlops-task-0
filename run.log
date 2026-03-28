@@ -1,0 +1,31 @@
+2026-03-28 05:49:35,853 - INFO - Job started
+2026-03-28 05:49:35,855 - INFO - Config loaded and validated. Seed: 42, Window: 5, Version: v1
+2026-03-28 05:49:35,855 - ERROR - Job failed: Input file not found: data.csv
+Traceback (most recent call last):
+  File "/home/santhu19951005/mlops-task-0/run.py", line 81, in main
+    raise FileNotFoundError(f"Input file not found: {args.input}")
+FileNotFoundError: Input file not found: data.csv
+2026-03-28 05:49:35,856 - INFO - Job exited with error. Latency: 2ms
+2026-03-28 05:53:58,035 - INFO - Job started
+2026-03-28 05:53:58,036 - INFO - Config loaded and validated. Seed: 42, Window: 5, Version: v1
+2026-03-28 05:53:58,052 - ERROR - Job failed: Missing required column: 'close'
+Traceback (most recent call last):
+  File "/home/santhu19951005/mlops-task-0/run.py", line 92, in main
+    raise ValueError("Missing required column: 'close'")
+ValueError: Missing required column: 'close'
+2026-03-28 05:53:58,054 - INFO - Job exited with error. Latency: 19ms
+2026-03-28 06:01:20,908 - INFO - Job started
+2026-03-28 06:01:20,910 - INFO - Config loaded and validated. Seed: 42, Window: 5, Version: v1
+2026-03-28 06:01:20,929 - ERROR - Job failed: Missing required column: 'close'
+Traceback (most recent call last):
+  File "/home/santhu19951005/mlops-task-0/run.py", line 91, in main
+    raise ValueError("Missing required column: 'close'")
+ValueError: Missing required column: 'close'
+2026-03-28 06:01:20,931 - INFO - Job exited with error. Latency: 22ms
+2026-03-28 06:07:30,580 - INFO - Job started
+2026-03-28 06:07:30,581 - INFO - Config loaded and validated. Seed: 42, Window: 5, Version: v1
+2026-03-28 06:07:30,600 - INFO - Dataset loaded successfully. Rows: 10000
+2026-03-28 06:07:30,600 - INFO - Computing rolling mean (window=5)...
+2026-03-28 06:07:30,601 - INFO - Generating signals...
+2026-03-28 06:07:30,603 - INFO - Metrics calculated and written successfully.
+2026-03-28 06:07:30,603 - INFO - Job completed successfully. Latency: 24ms
