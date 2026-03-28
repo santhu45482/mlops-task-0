@@ -29,3 +29,10 @@ ValueError: Missing required column: 'close'
 2026-03-28 06:07:30,601 - INFO - Generating signals...
 2026-03-28 06:07:30,603 - INFO - Metrics calculated and written successfully.
 2026-03-28 06:07:30,603 - INFO - Job completed successfully. Latency: 24ms
+2026-03-28 07:12:44,173 - INFO - Job started
+2026-03-28 07:12:44,174 - INFO - Config loaded and validated. Seed: 42, Window: 5, Version: v1
+2026-03-28 07:12:44,192 - INFO - Dataset loaded successfully. Rows: 10000
+2026-03-28 07:12:44,192 - INFO - Computing rolling mean (window=5)...
+2026-03-28 07:12:44,194 - INFO - Generating signals...
+2026-03-28 07:12:44,196 - INFO - Metrics summary - Rows: 10000, Signal Rate: 0.4989, Latency: 23ms
+2026-03-28 07:12:44,196 - INFO - Job completed with status: success

@@ -119,8 +119,8 @@ def main():
         }
         
         write_metrics(args.output, metrics_success)
-        logging.info("Metrics calculated and written successfully.")
-        logging.info(f"Job completed successfully. Latency: {latency_ms}ms")
+        logging.info(f"Metrics summary - Rows: {rows_processed}, Signal Rate: {round(signal_rate, 4)}, Latency: {latency_ms}ms")
+        logging.info("Job completed with status: success")
         sys.exit(0)
 
     except Exception as e:
