@@ -38,8 +38,8 @@ docker run --rm mlops-task
     "version": "v1",
     "rows_processed": 10000,
     "metric": "signal_rate",
-    "value": 0.5005,
-    "latency_ms": 150,
+    "value": 0.4989,
+    "latency_ms": 28,
     "seed": 42,
     "status": "success"
 }
