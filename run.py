@@ -7,6 +7,7 @@ import json
 import time
 import sys
 import os
+import io
 
 def setup_logging(log_file):
     """Configures logging to write to a file and output to the console."""
@@ -79,14 +80,19 @@ def main():
             raise ValueError("Input file is empty")
             
         try:
-            df = pd.read_csv(args.input)
+            # --- THE PYTHON "MESSY" WORKAROUND ---
+            # Read the file into memory, strip all double quotes, and load into Pandas via StringIO
+            with open(args.input, 'r') as f:
+                cleaned_csv_string = f.read().replace('"', '')
+                
+            df = pd.read_csv(io.StringIO(cleaned_csv_string))
         except Exception as e:
             raise ValueError(f"Invalid CSV format: {e}")
             
-        # --- THE FIX: Sanitize column names (lowercase and strip spaces) ---
+        # Sanitize column names
         df.columns = df.columns.str.strip().str.lower()
             
-        # Now validate that 'close' exists [cite: 27]
+        # Now validate that 'close' exists
         if 'close' not in df.columns:
             raise ValueError("Missing required column: 'close'")
             
